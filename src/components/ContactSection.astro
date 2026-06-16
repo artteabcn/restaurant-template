@@ -9,7 +9,7 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 
-const { mapsLat, mapsLng, whatsapp, instagramUrl } = siteConfig.contact;
+const { mapsLat, mapsLng, whatsapp, socialUrl, socialType } = siteConfig.contact;
 const mapSrc = `https://www.google.com/maps?q=${mapsLat},${mapsLng}&hl=${locale}&z=16&output=embed`;
 const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${mapsLat},${mapsLng}`;
 const whatsappHref = `https://wa.me/${whatsapp.replace(/\D/g, "")}`;
@@ -53,12 +53,13 @@ const whatsappHref = `https://wa.me/${whatsapp.replace(/\D/g, "")}`;
           rel="noopener noreferrer"
           class="btn-ghost">{t("contact.directions")}</a
         >
-        <a
-          href={instagramUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-ghost">{t("contact.instagram")}</a
-        >
+        {socialType !== "none" && socialUrl && (
+          <a
+            href={socialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-ghost">{t("social.follow")}</a>
+        )}
       </div>
     </div>
 

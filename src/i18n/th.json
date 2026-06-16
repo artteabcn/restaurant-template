@@ -87,17 +87,16 @@
     "addressLabel": "ที่อยู่",
     "address": "ที่อยู่ร้านอาหารที่นี่",
     "whatsappLabel": "WhatsApp",
-    "directions": "เปิดใน Google Maps",
-    "instagram": "ติดตามบน Instagram"
-  },
-  "instagram": {
-    "title": "จากห้องอาหาร",
-    "follow": "@restaurant"
+    "directions": "เปิดใน Google Maps"
   },
   "footer": {
     "tagline": "Restaurant Name · สถานที่",
     "rights": "สงวนลิขสิทธิ์",
     "addressShort": "บริเวณ เมือง",
     "hoursShort": "อังคาร – อาทิตย์ · 18:00 – เที่ยงคืน"
+  },
+  "social": {
+    "title": "ล่าสุดจากเรา",
+    "follow": "ติดตามเรา"
   }
 }

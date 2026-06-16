@@ -87,12 +87,11 @@
     "addressLabel": "Address",
     "address": "Restaurant address goes here",
     "whatsappLabel": "WhatsApp",
-    "directions": "Open in Google Maps",
-    "instagram": "Follow on Instagram"
+    "directions": "Open in Google Maps"
   },
-  "instagram": {
+  "social": {
     "title": "Latest from the room",
-    "follow": "@restaurant"
+    "follow": "Follow us"
   },
   "footer": {
     "tagline": "Restaurant Name · Location",

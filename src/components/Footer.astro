@@ -54,14 +54,16 @@ const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g,
         >
           {siteConfig.contact.whatsappDisplay}
         </a>
-        <a
-          href={siteConfig.contact.instagramUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block mt-2 text-[0.7rem] uppercase tracking-[0.22em] text-[var(--color-gold-deep)] hover:text-[var(--color-gold)] transition-colors"
-        >
-          {t("instagram.follow")} →
-        </a>
+        {siteConfig.contact.socialType !== "none" && siteConfig.contact.socialUrl && (
+          <a
+            href={siteConfig.contact.socialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mt-2 text-[0.7rem] uppercase tracking-[0.22em] text-[var(--color-gold-deep)] hover:text-[var(--color-gold)] transition-colors"
+          >
+            {t("social.follow")} →
+          </a>
+        )}
       </div>
     </div>
 

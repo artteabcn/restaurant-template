@@ -87,17 +87,16 @@
     "addressLabel": "Adresse",
     "address": "L'adresse du restaurant ici",
     "whatsappLabel": "WhatsApp",
-    "directions": "Ouvrir dans Google Maps",
-    "instagram": "Suivre sur Instagram"
-  },
-  "instagram": {
-    "title": "Depuis la salle",
-    "follow": "@restaurant"
+    "directions": "Ouvrir dans Google Maps"
   },
   "footer": {
     "tagline": "Restaurant Name · Lieu",
     "rights": "Tous droits réservés.",
     "addressShort": "Quartier, Ville",
     "hoursShort": "Mar – Dim · 18h – Minuit"
+  },
+  "social": {
+    "title": "Dernières nouvelles",
+    "follow": "Nous suivre"
   }
 }

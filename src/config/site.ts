@@ -15,8 +15,9 @@ export const siteConfig: SiteConfig = {
   contact: {
     whatsapp: "+66000000000",
     whatsappDisplay: "+66 00 000 0000",
-    instagram: "@restaurant",
-    instagramUrl: "https://www.instagram.com/restaurant/",
+    socialType: "none",
+    socialHandle: "",
+    socialUrl: "",
     address: "Address",
     mapsLat: 13.7563,
     mapsLng: 100.5018,

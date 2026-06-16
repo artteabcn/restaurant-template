@@ -31,8 +31,9 @@ export interface SiteConfig {
   contact: {
     whatsapp: string;
     whatsappDisplay: string;
-    instagram: string;
-    instagramUrl: string;
+    socialType: "instagram" | "facebook" | "none";
+    socialHandle: string;
+    socialUrl: string;
     address: string;
     mapsLat: number;
     mapsLng: number;
