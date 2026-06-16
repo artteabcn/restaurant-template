@@ -40,10 +40,8 @@ const todayName = fmt.format(new Date()).toLowerCase();
           return (
             <li class="flex items-baseline justify-between py-3">
               <span
-                class:list={[
-                  "text-sm tracking-wider uppercase font-light",
-                  isToday && "text-[var(--color-gold)]",
-                ]}
+                class="text-sm tracking-wider uppercase font-light"
+                style={isToday ? "color:var(--color-gold)" : ""}
               >
                 {t(`hours.${day}`)}
                 {isToday && (
@@ -51,11 +49,12 @@ const todayName = fmt.format(new Date()).toLowerCase();
                 )}
               </span>
               <span
-                class:list={[
-                  "font-display italic text-lg",
-                  isToday && slot && "text-[var(--color-gold)]",
-                  isToday && !slot && "text-[var(--color-fg-muted)]",
-                ]}
+                class="font-display italic text-lg"
+                style={isToday
+                  ? slot
+                    ? "color:var(--color-gold)"
+                    : "color:var(--color-fg)"
+                  : ""}
               >
                 {slot ? `${slot.open} – ${slot.close}` : t("hours.closed")}
               </span>
