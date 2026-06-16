@@ -17,6 +17,14 @@ export type ThemeName =
 
 export type Locale = "en" | "fr" | "th";
 
+export interface MenuItem {
+  category: string;
+  name: string;
+  description: string;
+  price: string;
+  tags: ("veg" | "vegan" | "gf" | "spicy")[];
+}
+
 export interface SiteConfig {
   name: string;
   slug: string;
@@ -39,6 +47,7 @@ export interface SiteConfig {
     mapsLng: number;
   };
   hours: Record<DayKey, { open: string; close: string } | null>;
+  menuMode?: "photos" | "items" | "both";
   images: {
     menu: string[];
   };
