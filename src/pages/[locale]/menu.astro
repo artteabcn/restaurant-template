@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Ornament from "@/components/Ornament.astro";
-import { useTranslations, localizedPath, type Locale, locales } from "@/i18n/utils";
+import { useTranslations, getDictionary, localizedPath, type Locale, locales } from "@/i18n/utils";
 import { siteConfig } from "@/config/site";
 import type { MenuItem } from "@/config/types";
 
@@ -24,9 +24,9 @@ const menuMode = siteConfig.menuMode ?? (pages.length > 0 ? "photos" : "items");
 const showPhotos = menuMode === "photos" || menuMode === "both";
 const showItems = menuMode === "items" || menuMode === "both";
 
-// Read menu items from i18n JSON
-const rawItems = (t as unknown as Record<string, unknown>)("menuItems") as MenuItem[] | string;
-const menuItems: MenuItem[] = Array.isArray(rawItems) ? rawItems : [];
+// Read menu items from i18n JSON — use getDictionary() since t() only returns strings
+const dict = getDictionary(locale);
+const menuItems: MenuItem[] = Array.isArray(dict.menuItems) ? (dict.menuItems as unknown as MenuItem[]) : [];
 
 // Group items by category
 const categories = [...new Set(menuItems.map(it => it.category || ""))];
